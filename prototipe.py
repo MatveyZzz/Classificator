@@ -6,7 +6,7 @@ from matplotlib.backends.backend_qt5agg import (
     FigureCanvasQTAgg as FigureCanvas
 )
 from matplotlib.figure import Figure
-
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 class Comments(QWidget):
     def __init__(self, comments):
@@ -66,7 +66,6 @@ class CircleDiagram:
         # Отобразить диаграмму
         self.canvas.draw()
 
-
 class TechComments(QWidget):
     def __init__(self, comments):
         super().__init__()
@@ -98,11 +97,6 @@ class TechComments(QWidget):
         main_layout.addWidget(scroll_area)
 
         self.setLayout(main_layout)
-
-
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
-
 
 # class LineChart:
 #     def __init__(self, x_data, y_data, title="Линейная диаграмма", x_label="X", y_label="Y"):
@@ -141,7 +135,6 @@ from matplotlib.figure import Figure
 #
 #         # Обновление холста
 #         self.canvas.draw()
-
 
 
 class Dashboard(QWidget):
@@ -192,8 +185,6 @@ class Dashboard(QWidget):
         main_layout.addWidget(tech_comments_widget)
 
         self.setLayout(main_layout)
-
-
 
 
 if __name__ == '__main__':
